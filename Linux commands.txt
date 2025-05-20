@@ -1,0 +1,315 @@
+                                                 LINUX COMMANDS
+
+1)ls command-used to list directories
+DELL@DESKTOP-HUISJEQ MINGW64 ~
+$ ls
+'3D Objects'/
+ AppData/
+'Application Data'@
+ Contacts/
+ Cookies@
+ Desktop/
+ Documents/
+ Downloads/
+ Favorites/
+ IntelGraphicsProfiles/
+ Links/
+'Local Settings'@
+ Music/
+'My Documents'@
+ NTUSER.DAT
+ NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TM.blf
+ NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000001.regtrans-ms
+ NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000002.regtrans-ms
+ NetHood@
+ OneDrive/
+ Pictures/
+ PrintHood@
+ PycharmProjects/
+ Recent@
+'Saved Games'/
+ Searches/
+ SendTo@
+'Start Menu'@
+ Templates@
+ Videos/
+ ntuser.dat.LOG1
+ ntuser.dat.LOG2
+ ntuser.ini
+2)pwd-used for printing current working directory
+DELL@DESKTOP-HUISJEQ MINGW64 ~
+$ pwd
+/c/Users/DELL
+3)cd-navigates through directories
+DELL@DESKTOP-HUISJEQ MINGW64 ~/desktop (master)
+$ cd devops
+
+DELL@DESKTOP-HUISJEQ MINGW64 ~/desktop/devops (master)
+$ cd python
+
+DELL@DESKTOP-HUISJEQ MINGW64 ~/desktop/devops/python (master)
+$ pwd
+/c/Users/DELL/desktop/devops/python
+
+4)mkdir-used to create directories
+DELL@DESKTOP-HUISJEQ MINGW64 ~/desktop (master)
+$ mkdir journal
+
+DELL@DESKTOP-HUISJEQ MINGW64 ~/desktop (master)
+$ ls
+ 1745544906770.jpg   Git_se1/             'Microsoft Edge.lnk'*       desktop.ini    journal/
+ Devops/            'Linux commands.txt'  'Visual Studio Code.lnk'*   file.txt.txt  'python1-exam (1).docx'
+5)mv-move or rename files
+DELL@DESKTOP-HUISJEQ MINGW64 ~/desktop (master)
+$ mv journal new-cp
+
+DELL@DESKTOP-HUISJEQ MINGW64 ~/desktop (master)
+$ ls
+ 1745544906770.jpg   Git_se1/             'Microsoft Edge.lnk'*       desktop.ini    new-cp/
+ Devops/            'Linux commands.txt'  'Visual Studio Code.lnk'*   file.txt.txt  'python1-exam (1).docx'
+6)cp-copying files
+DELL@DESKTOP-HUISJEQ MINGW64 ~/desktop (master)
+$ cp -r devops devops-copy
+
+DELL@DESKTOP-HUISJEQ MINGW64 ~/desktop (master)
+$ ls
+ 1745544906770.jpg   Git_se1/             'Microsoft Edge.lnk'*       desktop.ini    file.txt.txt  'python1-exam (1).docx'
+ Devops/            'Linux commands.txt'  'Visual Studio Code.lnk'*   devops-copy/   new-cp/
+
+7)rm-remove files
+DELL@DESKTOP-HUISJEQ MINGW64 ~/desktop (master)
+$ rm -r devops-copy
+
+DELL@DESKTOP-HUISJEQ MINGW64 ~/desktop (master)
+$ ls
+ 1745544906770.jpg   Git_se1/             'Microsoft Edge.lnk'*       desktop.ini    new-cp/
+ Devops/            'Linux commands.txt'  'Visual Studio Code.lnk'*   file.txt.txt  'python1-exam (1).docx'
+8)touch-creates new file
+DELL@DESKTOP-HUISJEQ MINGW64 ~/desktop (master)
+$ touch new-file
+
+DELL@DESKTOP-HUISJEQ MINGW64 ~/desktop (master)
+$ ls
+ 1745544906770.jpg   Git_se1/             'Microsoft Edge.lnk'*       desktop.ini    new-cp/   'python1-exam (1).docx'
+ Devops/            'Linux commands.txt'  'Visual Studio Code.lnk'*   file.txt.txt   new-file
+9)ln-creates symbolic link
+DELL@DESKTOP-HUISJEQ MINGW64 ~/desktop (master)
+$ ln -s new-file new-file-link
+DELL@DESKTOP-HUISJEQ MINGW64 ~/desktop (master)
+$ ls -l
+total 1385
+-rw-r--r-- 1 DELL 197121 1382788 Apr 25 07:06  1745544906770.jpg
+drwxr-xr-x 1 DELL 197121       0 Apr 24 20:40  Devops/
+drwxr-xr-x 1 DELL 197121       0 Apr 24 15:32  Git_se1/
+-rw-r--r-- 1 DELL 197121    2918 Apr 25 15:03 'Linux commands.txt'
+-rwxr-xr-x 1 DELL 197121    2352 Mar 26 07:02 'Microsoft Edge.lnk'*
+-rwxr-xr-x 1 DELL 197121    1401 Apr 22 21:14 'Visual Studio Code.lnk'*
+-rw-r--r-- 1 DELL 197121     282 Mar 26 07:02  desktop.ini
+-rw-r--r-- 1 DELL 197121       0 Apr 17 11:44  file.txt.txt
+drwxr-xr-x 1 DELL 197121       0 Apr 25 14:56  new-cp/
+-rw-r--r-- 1 DELL 197121       0 Apr 25 15:02  new-file
+-rw-r--r-- 1 DELL 197121       0 Apr 25 15:02  new-file-link
+-rw-r--r-- 1 DELL 197121   10556 Apr 11 11:44 'python1-exam (1).docx'
+10)clear-clear terminal display
+DELL@DESKTOP-HUISJEQ MINGW64 ~/desktop (master)
+$
+
+11)cat-display contents 12)echo-display text fllowing command
+13)less-display paged outputs
+DELL@DESKTOP-HUISJEQ MINGW64 ~/desktop (master)
+$ cat new-file
+Hello there
+DELL@DESKTOP-HUISJEQ MINGW64 ~/desktop (master)
+$ echo new-file
+new-file
+
+DELL@DESKTOP-HUISJEQ MINGW64 ~/desktop (master)
+$ echo hi there
+hi there
+
+14)man-access manual pages
+15)uname-information about os
+DELL@DESKTOP-HUISJEQ MINGW64 ~
+$ uname -a
+MINGW64_NT-10.0-19045 DESKTOP-HUISJEQ 3.5.7-463ebcdc.x86_64 2025-03-03 17:26 UTC x86_64 Msys
+16)whoami-gives active username
+DELL@DESKTOP-HUISJEQ MINGW64 ~
+$ whoami
+DELL
+17)tar-extract and compress files
+DELL@DESKTOP-HUISJEQ MINGW64 ~/desktop (master)
+$ tar -cvf compress.tar new-file new-file-link
+new-file
+new-file-link
+
+DELL@DESKTOP-HUISJEQ MINGW64 ~/desktop (master)
+$ tar -xvf compress.tar
+new-file
+new-file-link
+
+DELL@DESKTOP-HUISJEQ MINGW64 ~/desktop (master)
+$ ls
+ 1745544906770.jpg   Git_se1/             'Microsoft Edge.lnk'*       compress.tar   desktop.ini    new-cp/    new-file-link
+ Devops/            'Linux commands.txt'  'Visual Studio Code.lnk'*   cp/            file.txt.txt   new-file  'python1-exam (1).docx'
+18)grep-search for a string within a output
+DELL@DESKTOP-HUISJEQ MINGW64 ~/desktop (master)
+$ cat new-file
+Hello there
+hi how are you
+welcome to this file linux commands
+DELL@DESKTOP-HUISJEQ MINGW64 ~/desktop (master)
+$ cat new-file | grep "this"
+welcome to this file
+19)head 20)tail
+gives first 10 and last 10 lines respectively from given file
+DELL@DESKTOP-HUISJEQ MINGW64 ~/desktop (master)
+$ head new-file
+Hello there
+hi how are you
+welcome to this file
+11
+2
+2
+3
+4
+5
+6
+
+DELL@DESKTOP-HUISJEQ MINGW64 ~/desktop (master)
+$ tail new-file
+55
+h
+j
+kl
+d
+h
+h
+d
+e
+s
+21)diff-
+22)cmp-tells us the line number, which is different. Not the actual text.
+23)comm-compare two sorted files and display the lines that are unique to each file, as well as the lines that are common to both files
+DELL@DESKTOP-HUISJEQ MINGW64 ~/desktop (master)
+$ cmp new-file new-file-link
+cmp: EOF on ‘new-file’ after byte 108, line 21
+DELL@DESKTOP-HUISJEQ MINGW64 ~/desktop (master)
+$ diff new-file new-file-link
+21a22
+> new line added
+\ No newline at end of file
+DELL@DESKTOP-HUISJEQ MINGW64 ~/desktop (master)
+$ comm new-file new-file-link
+                Hello there
+                hi how are you
+                welcome to this file
+                11
+                2
+                2
+                3
+                4
+                5
+                6
+                f
+                55
+                h
+                j
+                kl
+                d
+                h
+                h
+                d
+                e
+                s
+        new line added
+comm: file 2 is not in sorted order
+comm: input is not in sorted order
+24)sort-sort contents acc to ascii values
+DELL@DESKTOP-HUISJEQ MINGW64 ~/desktop (master)
+$ sort new-file
+11
+2
+2
+3
+4
+5
+55
+6
+Hello there
+d
+d
+e
+f
+h
+h
+h
+hi how are you
+j
+kl
+s
+welcome to this file
+
+25)export-set environment variables. Environment variables are used to store information that can be used by processes or commands.
+26 & 27 zip & unzip done above
+28)ssh-establishes a secure shell connection to a remote server
+29)service-service command is used to start, stop, restart, and check the status of these services
+30)ps 31)kill and killall
+all used to manage processes in Linux
+32)df 33)mount
+are very efficient utilities to mount filesystems and get details of the file system
+34)chmod 35)chown
+ are used to modify file permissions and ownership in Linux
+DELL@DESKTOP-HUISJEQ MINGW64 ~/desktop (master)
+$ ls -l new-file
+-rw-r--r-- 1 DELL 197121 108 Apr 25 15:45 new-file
+
+DELL@DESKTOP-HUISJEQ MINGW64 ~/desktop (master)
+$ chmod +x new-file
+
+DELL@DESKTOP-HUISJEQ MINGW64 ~/desktop (master)
+$ ls -l new-file
+-rw-r--r-- 1 DELL 197121 108 Apr 25 15:45 new-file
+36)ifconfig 37)traceroute
+commands manage network interfaces and trace the route of network packets in Linux
+38)wget-direct download files from internet
+39)ufw 40)iptables
+ are used to manage firewalls
+41)apt,pacman,yum,rpm-are different package managers
+42)sudo-this command is equivalent to logging in as root (based on what permissions you have as a sudoer
+43)cal- displays a well-presented calendar on the terminal
+DELL@DESKTOP-HUISJEQ MINGW64 ~
+$ cal 2024
+44)alias-simple terms, it’s another name for a command that you’ve defined
+DELL@DESKTOP-HUISJEQ MINGW64 ~
+$ alias lsl=ls -l
+45)dd-was created to convert and copy files from multiple file system formats
+46)whereis 47)whatis
+are used in Linux to search for information about programs and files
+48)top-is a system monitoring tool that displays real-time information
+49)useradd 50)usermod
+used to manage user accounts
+51)passwd-lets you set the password for your own account, or if you have the permissions, set the password for other accounts
+DELL@DESKTOP-HUISJEQ MINGW64 ~
+$ passwd
+Old password:
+New password:
+Re-enter new password:
+You may not change the password for DELL.
+Try again.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
